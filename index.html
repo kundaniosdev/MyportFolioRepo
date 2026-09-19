@@ -61,54 +61,77 @@
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="container">
-        <div class="hero-badge" id="hero-badge">
-          <span class="badge-dot"></span>
-          Available for opportunities
-        </div>
-        <h1 class="hero-title" id="hero-title">
-          Hello, I'm <span class="gradient-text">Kundan.</span>
-        </h1>
-        <p class="hero-subtitle" id="hero-subtitle">
-          iOS Developer crafting production-grade apps with <strong>Swift</strong>, <strong>SwiftUI</strong> &amp; <strong>UIKit</strong>.<br />
-          Building real products that people actually use — live on the <span class="accent-text">App Store</span>.
-        </p>
-        <div class="hero-meta" id="hero-meta">
-          <span class="meta-item">
-            <i class="fa-solid fa-location-dot"></i>
-            Kolkata, India &bull; Open to Relocate
-          </span>
-          <span class="meta-sep">·</span>
-          <span class="meta-item">
-            <i class="fa-brands fa-apple"></i>
-            IB Arts Pvt Ltd
-          </span>
-        </div>
-        <div class="hero-actions" id="hero-actions">
-          <a href="#projects" class="btn btn-primary" id="btn-projects">
-            View My Work <i class="fa-solid fa-arrow-down"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/kundan-kumar-ios-developer/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-linkedin">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-github">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-        </div>
-        <div class="hero-stats" id="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Apps on App Store</span>
+        <div class="hero-layout">
+
+          <!-- Left: Text content -->
+          <div class="hero-left">
+            <div class="hero-badge" id="hero-badge">
+              <span class="badge-dot"></span>
+              Available for opportunities
+            </div>
+            <h1 class="hero-title" id="hero-title">
+              Hello, I'm <span class="gradient-text">Kundan.</span>
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">
+              iOS Developer crafting production-grade apps with <strong>Swift</strong>, <strong>SwiftUI</strong> &amp; <strong>UIKit</strong>.<br />
+              Building real products that people actually use — live on the <span class="accent-text">App Store</span>.
+            </p>
+            <div class="hero-meta" id="hero-meta">
+              <span class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                Kolkata, India &bull; Open to Relocate
+              </span>
+              <span class="meta-sep">·</span>
+              <span class="meta-item">
+                <i class="fa-brands fa-apple"></i>
+                IB Arts Pvt Ltd
+              </span>
+            </div>
+            <div class="hero-actions" id="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="btn-projects">
+                View My Work <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/kundan-kumar-ios-developer/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-linkedin">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-github">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+            <div class="hero-stats" id="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Apps on App Store</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">1+</span>
+                <span class="stat-label">Year of Experience</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">MCA</span>
+                <span class="stat-label">Master's in CS</span>
+              </div>
+            </div>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number">1+</span>
-            <span class="stat-label">Year of Experience</span>
+
+          <!-- Right: Profile photo -->
+          <div class="hero-right" id="hero-photo">
+            <div class="hero-photo-wrap">
+              <div class="hero-photo-ring"></div>
+              <img
+                src="./images/kundan_profile.jpg"
+                alt="Kundan Kumar — iOS Developer"
+                class="hero-photo-img"
+              />
+              <div class="hero-photo-badge">
+                <i class="fa-brands fa-apple"></i>
+                iOS Dev
+              </div>
+            </div>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-number">MCA</span>
-            <span class="stat-label">Master's in CS</span>
-          </div>
+
         </div>
       </div>
     </section>
@@ -147,6 +170,28 @@
             </ul>
           </div>
         </div>
+
+        <!-- Achievement Card -->
+        <div class="award-card" id="award-card">
+          <div class="award-card-left">
+            <img src="./images/award_photo.jpg" alt="Kundan Kumar receiving Craft Excellence Award at IB Arts Zenith" class="award-img" />
+          </div>
+          <div class="award-card-right">
+            <div class="award-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="award-label">Recognition</div>
+            <h3 class="award-title">Craft Excellence Award</h3>
+            <p class="award-desc">
+              Awarded the <strong>Craft Excellence Award</strong> at IB Arts' <em>Zenith — 9 Years of Digital Excellence</em> celebration, recognising outstanding technical contributions and dedication to building high-quality iOS applications.
+            </p>
+            <div class="award-meta">
+              <span><i class="fa-solid fa-building"></i> IB Arts Pvt Ltd</span>
+              <span><i class="fa-regular fa-calendar"></i> 2025</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

@@ -808,3 +808,203 @@ ul { list-style: none; }
   .nav-inner { padding: 0 16px; }
   .container { padding: 0 16px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   HERO — SPLIT LAYOUT WITH PROFILE PHOTO
+══════════════════════════════════════════════════════════════ */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+.hero-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Photo wrapper */
+.hero-photo-wrap {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+.hero-photo-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  z-index: 0;
+  animation: ring-spin 6s linear infinite;
+}
+@keyframes ring-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+/* Create a dashed effect on the ring */
+.hero-photo-ring::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg);
+  z-index: 1;
+}
+.hero-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 2;
+  border: 3px solid var(--bg);
+}
+/* Small iOS badge floating on photo */
+.hero-photo-badge {
+  position: absolute;
+  bottom: 8px;
+  right: -8px;
+  z-index: 3;
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.4);
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ACHIEVEMENT / AWARD CARD
+══════════════════════════════════════════════════════════════ */
+.award-card {
+  display: flex;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 20px;
+  transition: border-color var(--transition);
+}
+.award-card:hover { border-color: rgba(245,158,11,0.4); }
+.award-card-left {
+  flex-shrink: 0;
+  width: 260px;
+}
+.award-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.award-card-right {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.award-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f59e0b;
+  font-size: 18px;
+}
+.award-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+.award-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+.award-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 480px;
+}
+.award-desc strong { color: var(--text-primary); font-weight: 600; }
+.award-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.award-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.award-meta i { color: #f59e0b; }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — PHOTO + AWARD CARD
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+  .hero-right {
+    width: 100%;
+  }
+  .hero-photo-wrap {
+    width: 180px;
+    height: 180px;
+  }
+  .award-card {
+    flex-direction: column;
+  }
+  .award-card-left {
+    width: 100%;
+    height: 220px;
+  }
+  .award-card-right {
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-wrap {
+    width: 150px;
+    height: 150px;
+  }
+  .hero-photo-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+    bottom: 4px;
+    right: -4px;
+  }
+  .award-card-left {
+    height: 180px;
+  }
+}
